@@ -1,25 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h3,
+h4 {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
   width: 560px;
   height: 560px;
-  border: solid black;
+  margin: 1rem auto;
+
+  border: 2px solid green;
 }
+
 .grid div {
   width: 20px;
   height: 20px;
 }
 .pac-dot {
-  background-color: green;
+  background-color: gold;
   border: 5px solid white;
   box-sizing: border-box;
+  border-radius: 50%;
 }
 .wall {
   background-color: black;
 }
 .power-pellet {
   background-color: green;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 .blinky {
