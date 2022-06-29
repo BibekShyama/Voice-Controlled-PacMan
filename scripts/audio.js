@@ -1,12 +1,12 @@
 var isPlaying = true;
 var audio = [
-  new Audio("../sounds/pacman_intro.wav"),
-  new Audio("../sounds/pacman_chomp.wav"),
-  new Audio("../sounds/pacman_eatfruit.wav"),
-  new Audio("../sounds/pacman_eatghost.wav"),
-  new Audio("../sounds/pacman_scaredghost.wav"),
-  new Audio("../sounds/pacman_death.wav"),
-  new Audio("../sounds/pacman_win.mp3"),
+  new Audio("sounds/pacman_intro.wav"),
+  new Audio("sounds/pacman_chomp.wav"),
+  new Audio("sounds/pacman_eatfruit.wav"),
+  new Audio("sounds/pacman_eatghost.wav"),
+  new Audio("sounds/pacman_scaredghost.wav"),
+  new Audio("sounds/pacman_death.wav"),
+  new Audio("sounds/pacman_win.mp3"),
 ];
 // audio[0].play();
 // console.log("playing");
