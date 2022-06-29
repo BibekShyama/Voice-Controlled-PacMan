@@ -1,3 +1,4 @@
+// using web audio api for speech recognition
 let key;
 window.SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -18,8 +19,8 @@ recognition.addEventListener("result", (e) => {
   if (key === "start") {
     startGame();
   }
-  if (key === "restart") {
-    restartGame();
+  if (key === "reset") {
+    resetGame();
   }
 });
 recognition.addEventListener("end", recognition.start);

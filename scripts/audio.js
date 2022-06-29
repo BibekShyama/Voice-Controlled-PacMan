@@ -8,18 +8,15 @@ var audio = [
   new Audio("sounds/pacman_death.wav"),
   new Audio("sounds/pacman_win.mp3"),
 ];
-// audio[0].play();
-// console.log("playing");
+
 function toogle() {
   if (isPlaying) {
     isPlaying = false;
     soundOnOff.innerHTML = "&#128264;";
-    // console.log("hiding soundOn and displaying soundOff");
   } else {
     isPlaying = true;
     soundOnOff.innerHTML = "&#128266;";
-    // console.log("hiding soundOff and displaying soundOn");
   }
-  console.log("toggling :", isPlaying);
+  console.log("sound-on:", isPlaying);
 }
 soundButton.addEventListener("click", toogle);

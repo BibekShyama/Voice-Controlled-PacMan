@@ -12,10 +12,7 @@ function checkGameOver() {
     clearInterval(rightId);
     clearInterval(upId);
     clearInterval(downId);
-    // setTimeout(function () {
-    //   alert("Game Over!");
-    // }, 500);
-    scoreDisplay.innerHTML = "GAME OVER!!!";
+    gameOverDisplay.innerHTML = "Game Over!!!";
     if (isPlaying) {
       audio[5].play();
     }

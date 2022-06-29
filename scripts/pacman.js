@@ -23,18 +23,16 @@ function moveLeft() {
       position[pacmanCurrentPosition - 1].classList.contains("wall") ||
       position[pacmanCurrentPosition - 1].classList.contains("ghost-lair")
     ) {
-      // console.log("insideIF: left");
       clearInterval(leftId);
     } else {
       removePacman();
       pacmanCurrentPosition -= 1;
-      // console.log("insideElse: left");
+      position[pacmanCurrentPosition].classList.add("pacman", "pacman-left");
       eatDot();
       eatPowerPellet();
       checkForWin();
       checkForWin();
     }
-    position[pacmanCurrentPosition].classList.add("pacman", "pacman-left");
   }, speed);
 }
 function moveRight() {
@@ -47,18 +45,15 @@ function moveRight() {
       position[pacmanCurrentPosition + 1].classList.contains("ghost-lair")
     ) {
       clearInterval(rightId);
-      // console.log("insideIF:Right");
     } else {
       removePacman();
       pacmanCurrentPosition += 1;
-      // console.log("insideELSE:right");
-
+      position[pacmanCurrentPosition].classList.add("pacman", "pacman-right");
       eatDot();
       eatPowerPellet();
       checkForWin();
       checkGameOver();
     }
-    position[pacmanCurrentPosition].classList.add("pacman", "pacman-right");
   }, speed);
 }
 function moveUp() {
@@ -70,12 +65,10 @@ function moveUp() {
       position[pacmanCurrentPosition - width].classList.contains("wall") ||
       position[pacmanCurrentPosition - width].classList.contains("ghost-lair")
     ) {
-      // console.log("insideIF:up");
       clearInterval(upId);
     } else {
       removePacman();
       pacmanCurrentPosition -= width;
-      // console.log("insideElse:up");
       position[pacmanCurrentPosition].classList.add("pacman", "pacman-up");
       eatDot();
       eatPowerPellet();
@@ -94,12 +87,9 @@ function moveDown() {
       position[pacmanCurrentPosition + width].classList.contains("ghost-lair")
     ) {
       clearInterval(downId);
-
-      // console.log("insideIf: Down");
     } else {
       removePacman();
       pacmanCurrentPosition += width;
-      // console.log("INSIDEELSE: down");
       position[pacmanCurrentPosition].classList.add("pacman", "pacman-down");
       eatDot();
       eatPowerPellet();
@@ -143,34 +133,6 @@ function direction(e) {
   movePacman(dir);
 }
 
-// window.SpeechRecognition =
-//   window.SpeechRecognition || window.webkitSpeechRecognition;
-
-// const recognition = new SpeechRecognition();
-// recognition.lang = "en-US";
-// recognition.interimResults = true;
-// recognition.continuous = false;
-// recognition.start();
-
 //   starting position of pac-man
 let pacmanCurrentPosition = 490;
 position[pacmanCurrentPosition].classList.add("pacman", "pacman-right");
-
-// recognition of speech and storing the result in key
-// recognition.addEventListener("result", (e) => {
-//   const spokenWord = Array.from(e.results).map(
-//     (results) => results[0].transcript
-//   );
-//   // console.log(e.results);
-//   // console.log("spokenWord: ", spokenWord);
-//   key = spokenWord[0];
-//   console.log("spokenWord :", key);
-// });
-// when speech sound ends calls direction function
-// recognition.addEventListener("soundend", direction);
-// controls via keyboard
-// document.addEventListener("keyup", direction);
-
-// console.log(key);
-
-// recognition.addEventListener("end", recognition.start);

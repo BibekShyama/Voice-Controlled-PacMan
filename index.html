@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- External CSS Link -->
     <link rel="stylesheet" href="style.css" />
 
     <!-- google font link -->
@@ -17,19 +18,21 @@
     <h3>
       Score:<span id="score">0</span>
       <button id="sound-button" class="soundOnOff">&#128266;</button>
-      <!-- <button id="sound-button" class="soundOff">&#128264;</button> -->
     </h3>
+    <h3 class="game-over"></h3>
     <div class="grid"></div>
     <div class="start-container">
       <h3 class="start-content">Say 'start' or Click</h3>
       <button id="start-button">Start</button>
     </div>
     <div class="reset-container">
-      <h3 class="reset-content">Say 'restart' or Click</h3>
+      <h3 class="reset-content">Say 'reset' or Click</h3>
       <button id="reset-button">Reset</button>
     </div>
     <h4>Controls : Arrow Keys</h4>
     <h4>Voice Control : 'Left', 'Right', 'Up', 'Down'</h4>
+
+    <!-- <script src="scripts/microphone.js"></script> -->
     <script src="scripts/voice.js"></script>
     <script src="scripts/map.js"></script>
     <script src="scripts/startGame.js"></script>

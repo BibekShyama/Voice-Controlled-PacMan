@@ -1,3 +1,10 @@
+// reloading the page
+function resetGame() {
+  console.log("reset");
+  window.location.reload();
+}
+resetButton.addEventListener("click", resetGame);
+
 // function resetGame() {
 //   console.log("resetting game");
 //   //   reset pacman position
@@ -40,10 +47,3 @@
 //   // move ghost
 //   // ghosts.forEach((ghost) => moveGhost(ghost));
 // }
-
-// reloading the page
-function resetGame() {
-  console.log("reset");
-  window.location.reload();
-}
-resetButton.addEventListener("click", resetGame);

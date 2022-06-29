@@ -19,14 +19,12 @@ ghosts.forEach((ghost) => {
   position[ghost.currentPosition].classList.add(ghost.className);
   position[ghost.currentPosition].classList.add("ghost");
 });
-// move all ghost randomly
-// ghosts.forEach((ghost) => moveGhost(ghost));
 
 function moveGhost(ghost) {
   const directions = [-1, +1, width, -width];
   let direction = directions[Math.floor(Math.random() * directions.length)];
   ghost.timerId = setInterval(function () {
-    // if next position of ghost movement does not contain wall and other ghost you can go there
+    // if next position of ghost movement does not contain wall and other ghosts, ghost can go there
     if (
       !position[ghost.currentPosition + direction].classList.contains("wall") &&
       !position[ghost.currentPosition + direction].classList.contains("ghost")

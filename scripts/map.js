@@ -1,14 +1,20 @@
 const grid = document.querySelector(".grid");
 const scoreDisplay = document.getElementById("score");
+const gameOverDisplay = document.querySelector(".game-over");
 const startButton = document.getElementById("start-button");
 const resetButton = document.getElementById("reset-button");
 const soundButton = document.getElementById("sound-button");
 const soundOnOff = document.querySelector(".soundOnOff");
-// const soundOff = document.querySelector(".soundOff");
-const width = 28; //28 x 28 = 784 squares
+const width = 28;
 let score = 0;
 
 // layout of grid and what is in the squares
+//   legends :
+// 0 - pac-dot
+// 1 - wall
+// 2 -ghost-lair
+// 3 -power-pellet
+// 4 -empty
 const layout = [
   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
   1, 1, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -79,12 +85,6 @@ const layout = [
 // ];
 
 //   console.log(layout.length); 784 items
-//   legends :
-// 0 - pac-dot
-// 1 - wall
-// 2 -ghost-lair
-// 3 -power-pellet
-// 4 -empty
 
 const position = [];
 //creating the tileMap
@@ -97,6 +97,7 @@ function tileMap() {
     //   add layout to the Map
     if (layout[i] === 0) {
       position[i].classList.add("pac-dot");
+      position[i].innerHTML = ".";
     } else if (layout[i] === 1) {
       position[i].classList.add("wall");
     } else if (layout[i] === 2) {
