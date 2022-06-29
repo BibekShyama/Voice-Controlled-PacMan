@@ -16,5 +16,8 @@ function checkGameOver() {
     //   alert("Game Over!");
     // }, 500);
     scoreDisplay.innerHTML = "GAME OVER!!!";
+    if (isPlaying) {
+      audio[5].play();
+    }
   }
 }

@@ -14,17 +14,32 @@
     <title>Voice Controlled PacMan</title>
   </head>
   <body>
-    <h3>Score:<span id="score">0</span></h3>
+    <h3>
+      Score:<span id="score">0</span>
+      <button id="sound-button" class="soundOnOff">&#128266;</button>
+      <!-- <button id="sound-button" class="soundOff">&#128264;</button> -->
+    </h3>
     <div class="grid"></div>
-    <!-- <h4>Controls : Arrow Keys</h4> -->
+    <div class="start-container">
+      <h3 class="start-content">Say 'start' or Click</h3>
+      <button id="start-button">Start</button>
+    </div>
+    <div class="reset-container">
+      <h3 class="reset-content">Say 'restart' or Click</h3>
+      <button id="reset-button">Reset</button>
+    </div>
+    <h4>Controls : Arrow Keys</h4>
     <h4>Voice Control : 'Left', 'Right', 'Up', 'Down'</h4>
-
+    <script src="scripts/voice.js"></script>
     <script src="scripts/map.js"></script>
+    <script src="scripts/startGame.js"></script>
     <script src="scripts/pacman.js"></script>
     <script src="scripts/eatDot.js"></script>
     <script src="scripts/eatPellet.js"></script>
     <script src="scripts/ghost.js"></script>
+    <script src="scripts/resetGame.js"></script>
     <script src="scripts/checkForWin.js"></script>
     <script src="scripts/gameOver.js"></script>
+    <script src="scripts/audio.js"></script>
   </body>
 </html>

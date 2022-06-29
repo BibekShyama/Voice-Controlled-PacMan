@@ -3,7 +3,7 @@ let rightId;
 let upId;
 let downId;
 let dir;
-let key;
+
 const speed = 200;
 
 function removePacman() {
@@ -34,7 +34,6 @@ function moveLeft() {
       checkForWin();
       checkForWin();
     }
-    // position[pacmanCurrentPosition].classList.add("pacman");
     position[pacmanCurrentPosition].classList.add("pacman", "pacman-left");
   }, speed);
 }
@@ -59,7 +58,6 @@ function moveRight() {
       checkForWin();
       checkGameOver();
     }
-    // position[pacmanCurrentPosition].classList.add("pacman");
     position[pacmanCurrentPosition].classList.add("pacman", "pacman-right");
   }, speed);
 }
@@ -78,7 +76,6 @@ function moveUp() {
       removePacman();
       pacmanCurrentPosition -= width;
       // console.log("insideElse:up");
-      // position[pacmanCurrentPosition].classList.add("pacman");
       position[pacmanCurrentPosition].classList.add("pacman", "pacman-up");
       eatDot();
       eatPowerPellet();
@@ -103,7 +100,6 @@ function moveDown() {
       removePacman();
       pacmanCurrentPosition += width;
       // console.log("INSIDEELSE: down");
-      // position[pacmanCurrentPosition].classList.add("pacman");
       position[pacmanCurrentPosition].classList.add("pacman", "pacman-down");
       eatDot();
       eatPowerPellet();
@@ -147,35 +143,34 @@ function direction(e) {
   movePacman(dir);
 }
 
-window.SpeechRecognition =
-  window.SpeechRecognition || window.webkitSpeechRecognition;
+// window.SpeechRecognition =
+//   window.SpeechRecognition || window.webkitSpeechRecognition;
 
-const recognition = new SpeechRecognition();
-recognition.lang = "en-US";
-recognition.interimResults = true;
-recognition.continuous = false;
-recognition.start();
+// const recognition = new SpeechRecognition();
+// recognition.lang = "en-US";
+// recognition.interimResults = true;
+// recognition.continuous = false;
+// recognition.start();
 
 //   starting position of pac-man
 let pacmanCurrentPosition = 490;
-// position[pacmanCurrentPosition].classList.add("pacman");
 position[pacmanCurrentPosition].classList.add("pacman", "pacman-right");
 
 // recognition of speech and storing the result in key
-recognition.addEventListener("result", (e) => {
-  const spokenWord = Array.from(e.results).map(
-    (results) => results[0].transcript
-  );
-  // console.log(e.results);
-  // console.log("spokenWord: ", spokenWord);
-  key = spokenWord[0];
-  console.log("spokenWord :", key);
-});
+// recognition.addEventListener("result", (e) => {
+//   const spokenWord = Array.from(e.results).map(
+//     (results) => results[0].transcript
+//   );
+//   // console.log(e.results);
+//   // console.log("spokenWord: ", spokenWord);
+//   key = spokenWord[0];
+//   console.log("spokenWord :", key);
+// });
 // when speech sound ends calls direction function
-recognition.addEventListener("soundend", direction);
+// recognition.addEventListener("soundend", direction);
 // controls via keyboard
-document.addEventListener("keyup", direction);
+// document.addEventListener("keyup", direction);
 
 // console.log(key);
 
-recognition.addEventListener("end", recognition.start);
+// recognition.addEventListener("end", recognition.start);

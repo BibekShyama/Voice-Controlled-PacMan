@@ -1,5 +1,10 @@
 const grid = document.querySelector(".grid");
 const scoreDisplay = document.getElementById("score");
+const startButton = document.getElementById("start-button");
+const resetButton = document.getElementById("reset-button");
+const soundButton = document.getElementById("sound-button");
+const soundOnOff = document.querySelector(".soundOnOff");
+// const soundOff = document.querySelector(".soundOff");
 const width = 28; //28 x 28 = 784 squares
 let score = 0;
 

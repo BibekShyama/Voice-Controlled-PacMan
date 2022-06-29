@@ -3,5 +3,8 @@ function eatDot() {
     score++;
     scoreDisplay.innerHTML = score;
     position[pacmanCurrentPosition].classList.remove("pac-dot");
+    if (isPlaying) {
+      audio[1].play();
+    }
   }
 }
