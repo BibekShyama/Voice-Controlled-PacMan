@@ -1,12 +1,12 @@
-const grid = document.querySelector(".grid");
-const scoreDisplay = document.getElementById("score");
-const gameOverDisplay = document.querySelector(".game-over");
-const startButton = document.getElementById("start-button");
-const resetButton = document.getElementById("reset-button");
-const soundButton = document.getElementById("sound-button");
-const soundOnOff = document.querySelector(".soundOnOff");
-const width = 28;
-let score = 0;
+// const grid = document.querySelector(".grid");
+// const scoreDisplay = document.getElementById("score");
+// const gameOverDisplay = document.querySelector(".game-over");
+// const startButton = document.getElementById("start-button");
+// const resetButton = document.getElementById("reset-button");
+// const soundButton = document.getElementById("sound-button");
+// const soundOnOff = document.querySelector(".soundOnOff");
+// const width = 28;
+// let score = 0;
 
 // layout of grid and what is in the squares
 //   legends :

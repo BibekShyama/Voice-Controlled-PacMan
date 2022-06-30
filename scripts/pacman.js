@@ -4,8 +4,6 @@ let upId;
 let downId;
 let dir;
 
-const speed = 200;
-
 function removePacman() {
   position[pacmanCurrentPosition].classList.remove("pacman");
   position[pacmanCurrentPosition].classList.remove("pacman-right");

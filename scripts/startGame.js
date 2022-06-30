@@ -5,5 +5,7 @@ function startGame() {
   if (isPlaying) {
     audio[0].play();
   }
+  startContainer.style.display = "none";
+  resetContainer.style.display = "unset";
 }
 startButton.addEventListener("click", startGame);

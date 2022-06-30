@@ -59,6 +59,7 @@ h4 {
   text-align: center;
 }
 .reset-container {
+  display: none;
   /* border: 2px green solid; */
   position: absolute;
   top: 250px;
@@ -99,12 +100,32 @@ h4 {
   background-image: url("images/scared-ghost.png");
 }
 .pacman {
-  background-image: url("images/pacman.png");
+  /* background-image: url("images/mouth-open.png"); */
+  /* background-image: url("images/mouth-half.png"); */
+  /* background-image: url("images/mouth-close.png"); */
+  background-repeat: no-repeat;
   border-radius: 10px;
+  animation-name: animate;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+}
+@keyframes animate {
+  0% {
+    background-image: url("images/mouth-half.png");
+  }
+  33% {
+    background-image: url("images/mouth-open.png");
+  }
+  66% {
+    background-image: url("images/mouth-half.png");
+  }
+  100% {
+    background-image: url("images/mouth-close.png");
+  }
 }
 
 .pacman-left {
-  transform: rotate(180deg);
+  transform: scaleX(-1);
 }
 
 .pacman-up {
