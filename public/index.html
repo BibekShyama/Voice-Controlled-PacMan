@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/blinky.png" />
     <!-- External CSS Link -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
 
     <!-- google font link -->
     <link
@@ -19,6 +20,7 @@
       Score:<span id="score">0</span>
       <button id="sound-button" class="soundOnOff">&#128266;</button>
     </h3>
+    <h3 class="you-won"></h3>
     <h3 class="game-over"></h3>
     <div class="grid"></div>
     <div class="start-container">
@@ -28,6 +30,14 @@
     <div class="reset-container">
       <h3 class="reset-content">Say 'reset' or Click</h3>
       <button id="reset-button">Reset</button>
+    </div>
+    <div class="spokenword-container">
+      SpokenWord
+      <div class="spokenword"></div>
+    </div>
+    <div class="command-container">
+      Command
+      <div class="command"></div>
     </div>
     <h4>Controls : Arrow Keys</h4>
     <h4>Voice Control : 'Left', 'Right', 'Up', 'Down'</h4>

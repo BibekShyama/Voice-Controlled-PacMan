@@ -13,9 +13,11 @@ recognition.addEventListener("result", (e) => {
     (results) => results[0].transcript
   );
   // console.log(e.results);
-  //   console.log("spokenWord: ", spokenWord);
+  // console.log("spokenWord: ", spokenWord);
   key = spokenWord[0];
+  spokenwordContainer.innerHTML = key;
   console.log("spokenWord :", key);
+
   if (key === "start") {
     startGame();
   }

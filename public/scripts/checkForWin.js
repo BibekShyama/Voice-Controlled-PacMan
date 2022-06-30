@@ -1,6 +1,6 @@
 // check for a win
 function checkForWin() {
-  if (score === 275) {
+  if (score >= 275) {
     ghosts.forEach((ghost) => clearInterval(ghost.timerId));
     document.removeEventListener("keyup", direction);
     recognition.removeEventListener("soundend", direction);
@@ -8,7 +8,7 @@ function checkForWin() {
     clearInterval(rightId);
     clearInterval(upId);
     clearInterval(downId);
-    scoreDisplay.innerHTML = "YOU WON";
+    youWonDisplay.innerHTML = "&#x1F3C6;YOU WON&#x1F3C6;";
     if (isPlaying) {
       audio[6].play();
     }

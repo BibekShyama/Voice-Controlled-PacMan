@@ -127,6 +127,7 @@ function direction(e) {
   } else if (key === "down" || e.keyCode === 40) {
     dir = "down";
   }
+  commandContainer.innerHTML = dir;
   console.log("COMMAND: ", dir);
   movePacman(dir);
 }

@@ -1,5 +1,6 @@
 const grid = document.querySelector(".grid");
 const scoreDisplay = document.getElementById("score");
+const youWonDisplay = document.querySelector(".you-won");
 const gameOverDisplay = document.querySelector(".game-over");
 const startButton = document.getElementById("start-button");
 const resetButton = document.getElementById("reset-button");
@@ -7,6 +8,8 @@ const soundButton = document.getElementById("sound-button");
 const soundOnOff = document.querySelector(".soundOnOff");
 const startContainer = document.querySelector(".start-container");
 const resetContainer = document.querySelector(".reset-container");
+const commandContainer = document.querySelector(".command");
+const spokenwordContainer = document.querySelector(".spokenword");
 const width = 28;
 const speed = 250;
 let score = 0;

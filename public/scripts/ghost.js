@@ -3,15 +3,15 @@ class Ghost {
     this.className = className;
     this.startPosition = startPosition;
     this.currentPosition = startPosition;
-    this.speed = speed;
     this.timerId = NaN;
+    this.speed = speed;
     this.isScared = false;
   }
 }
 ghosts = [
-  new Ghost("blinky", 348, 250),
-  new Ghost("pinky", 376, 400),
-  new Ghost("inky", 351, 300),
+  new Ghost("blinky", 349, 250),
+  new Ghost("pinky", 377, 350),
+  new Ghost("inky", 351, 400),
   new Ghost("clyde", 379, 500),
 ];
 // plotting ghost in the map
@@ -54,6 +54,9 @@ function moveGhost(ghost) {
       ghost.isScared &&
       position[ghost.currentPosition].classList.contains("pacman")
     ) {
+      if (isPlaying) {
+        audio[3].play();
+      }
       position[ghost.currentPosition].classList.remove(
         ghost.className,
         "ghost",
